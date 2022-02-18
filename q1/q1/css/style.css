@@ -1,31 +1,85 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="./css/reset.css"><link rel="stylesheet" href="./css/base.css"><link rel="stylesheet" href="./css/style.css"><title>LayoutParts-Q1</title></head><body><div class="wrapper"><h1 class="title">基本レイアウト・パーツ</h1><h2 class="sub--title">Q1中央寄せ・横並び</h2><h3 class="question--title">Q1-1 左右中央寄せ</h3><!-- Q1-1の回答はここから --><!-- text-alignを使って左右中央寄せ --><div class="q1--horizontality"><div class="inline--box"><div class="align--box"><p class="align--text">text-align</p></div></div></div><!-- margin --><!-- marginを使って左右中央寄せ --><div class="q1--horizontality"><div class="inline--box"><p class="margin--text">margin</p></div></div><!-- Q1-1の回答はここまで --><h3 class="question--title">Q1-2 上下左右中央寄せ</h3><!-- Q1-2の回答はここから --><!-- tableを使って上下左右中央寄せ --><div class="q1--perimeter display--table"><div class="dis--table"><p class="table--text">table</p></div></div><!-- flexを使って上下左右中央寄せ --><div class="q1--perimeter display--flex"><p class="flex--text">flex</p></div><!-- positionを使って上下左右中央寄せ --><div class="q1--position"><div class="container position--relative"><p class="position--text">position</p></div></div><!-- Q1-2の回答はここまで --></div></body></html>display: flex;
-
-/* アイテムを中央付近にまとめる */
-
-align-items: center;
-
-/* アイテムを中央に寄せる */
-
-justify-content: center;
-
-}
-
-/* 親要素で位置を指定しいるので子要素には位置を指定するプロパティはなし */
-.flex--text {
-    font-size: 16px;
-    padding: 10px;
-    background-color: #fff;
-}
-.position--relative {
-    /* positionは文書内で要素がどのように配置されるかを設定 */
+    @charset "UTF-8";
+    /* 回答はここから */
     
-    position: relative;
-}
-.position--text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px;
-    background: #a4b3e9;
-}
+    .inline--box {
+        /* display:inline-blockでブロック要素ボックスを生成 */
+        display: inline-block;
+        /* widthで要素の幅を設定 */
+        width: 200px;
+        /* paddingで要素の内部に追加の領域を作成 */
+        padding: 20px 0;
+        background-color: #fff;
+    }
+    
+    .align--box {
+        /* text-alignでテキストの配置（横位置）を調整する */
+        text-align: center;
+    }
+    
+    .align--text {
+        display: inline-block;
+        font-size: 16px;
+        padding: 10px;
+        background-color: #a4b3e9;
+    }
+    
+    .margin--text {
+        text-align: center;
+        /* 要素を中央揃えするためにautoを使用 */
+        margin: 0 auto;
+        font-size: 16px;
+        width: 90px;
+        padding: 10px;
+        background-color: #a4b3e9;
+    }
+    
+    .display--table {
+        /* displya:table;はHTML の <table>要素と同じように動作 */
+        display: table;
+    }
+    
+    .dis--table {
+        text-align: center;
+        display: table-cell;
+        /* vertical-align はインライン要素、インラインブロック要素、表のセル要素だけに適用。垂直方向の配置には使用できない*/
+        vertical-align: middle;
+        /* middleは要素の中央を親要素の baseline+x-height の半分 に揃える
+         */
+    }
+    
+    .table--text {
+        font-size: 16px;
+        padding: 10px;
+        background-color: #fff;
+        display: inline-block;
+    }
+    /* 親要素に指定して子要素を中央揃え */
+    
+    .display--flex {
+        display: flex;
+        /* アイテムを中央付近にまとめる */
+        align-items: center;
+        /* アイテムを中央に寄せる */
+        justify-content: center;
+    }
+    /* 親要素で位置を指定しいるので子要素には位置を指定するプロパティはなし */
+    
+    .flex--text {
+        font-size: 16px;
+        padding: 10px;
+        background-color: #fff;
+    }
+    
+    .position--relative {
+        /* positionは文書内で要素がどのように配置されるかを設定 */
+        position: relative;
+    }
+    
+    .position--text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px;
+        background: #a4b3e9;
+    }

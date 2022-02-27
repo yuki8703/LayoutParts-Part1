@@ -1,1 +1,37 @@
 @charset "UTF-8";
+th,
+td {
+    text-align: center;
+    padding: 10px;
+    border: solid 1px;
+    /* 枠線指定 */
+}
+
+.cell--table {
+    /* 列幅はwidthプロパティで指定した値で固定されて表示 */
+    table-layout: fixed;
+    width: 100%;
+}
+
+th {
+    font-weight: bolder;
+    background-color: #319c4a;
+}
+
+.cell--table tr {
+    background: #d5ffc7;
+}
+
+
+/* 一連の兄弟要素の中で偶数番目の要素  */
+
+.cell--table tr:nth-child(even) {
+    background-color: #babcba;
+}
+
+
+/* 一連の兄弟要素のグループの中で最後の要素  */
+
+.cell--table tbody tr:last-child {
+    border-top: 1px double #ffffff;
+}

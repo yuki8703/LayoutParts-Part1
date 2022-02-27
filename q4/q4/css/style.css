@@ -1,1 +1,48 @@
 @charset "UTF-8";
+.stage--box {
+    display: table;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.main--area .stage--box:first-child {
+    margin-top: 0;
+}
+
+.common--box {
+    display: table-cell;
+    text-align: center;
+    padding: 20px;
+}
+
+.red--box {
+    width: 300px;
+    background-color: #ff7b7b;
+}
+
+.blue--box {
+    background-color: #7b86ff;
+}
+
+.yellow--box {
+    width: 300px;
+    background-color: #fff27b;
+}
+
+.green--box {
+    background-color: #7bff91;
+}
+
+.pink--box {
+    width: 400px;
+    background-color: #ff7be2;
+}
+
+.orange--box {
+    width: 400px;
+    background-color: #ffc67b;
+}
+
+.sky--blue--box {
+    background-color: #7bf2ff;
+}

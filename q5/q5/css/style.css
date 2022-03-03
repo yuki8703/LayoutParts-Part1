@@ -1,1 +1,62 @@
 @charset "UTF-8";
+.flex--box {
+    color: #fff;
+    background-color: #00bbdd;
+    width: 65px;
+    padding: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+/* Q5-1 */
+
+
+/* 左寄せ横並び順番通り */
+
+.display--flex--row {
+    display: flex;
+}
+
+
+/* 右寄せ横並び順番逆 */
+
+.display--flex--reverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+
+/* 縦並び順番通り */
+
+.display--flex--column {
+    flex-direction: column;
+}
+
+
+/* 縦並び順番逆 */
+
+.display--flex--column--reverse {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 20px;
+}
+
+
+/* Q5-2 */
+
+
+/* 横並び折り返さない */
+
+.display--no--wrap {}
+
+
+/* 横並び折り返す */
+
+.display--wrap {}
+
+
+/* 横並び折り返し順逆 */
+
+.display--wrap-reverse {}

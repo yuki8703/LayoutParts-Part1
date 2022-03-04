@@ -1,4 +1,7 @@
 @charset "UTF-8";
+
+/* itemの基本レイアウト */
+
 .flex--box {
     color: #fff;
     background-color: #00bbdd;
@@ -49,14 +52,23 @@
 
 /* 横並び折り返さない */
 
-.display--no--wrap {}
+.display--no--wrap {
+    display: flex;
+    flex-wrap: nowrap;
+}
 
 
 /* 横並び折り返す */
 
-.display--wrap {}
+.display--wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 
 /* 横並び折り返し順逆 */
 
-.display--wrap-reverse {}
+.display--wrap-reverse {
+    display: flex;
+    flex-wrap: wrap-reverse;
+}

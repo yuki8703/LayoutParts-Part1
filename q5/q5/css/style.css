@@ -13,7 +13,7 @@
 }
 
 
-/* Q5-1 */
+/* Q5-１ここから */
 
 
 /* 左寄せ横並び順番通り */
@@ -47,7 +47,10 @@
 }
 
 
-/* Q5-2 */
+/* Q5-1ここまで */
+
+
+/* Q5-2ここから */
 
 
 /* 横並び折り返さない */
@@ -68,7 +71,59 @@
 
 /* 横並び折り返し順逆 */
 
-.display--wrap-reverse {
+.display--wrap--reverse {
     display: flex;
     flex-wrap: wrap-reverse;
 }
+
+
+/* Q5-2ここまで */
+
+
+/* Q5-3ここから */
+
+
+/* 左から配置 */
+
+.justify--content--left {
+    display: flex;
+    justify-content: left;
+}
+
+
+/* 右側から配置 */
+
+.justify--content--right {
+    display: flex;
+    justify-content: right;
+}
+
+
+/* 真ん中に配置 */
+
+.justify--content--center {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* 均等に配置左右は壁寄せ */
+
+.justify--content--space--between {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* 均等に配置左右には余白 */
+
+.justify--content--space--around {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* Q5-3ここまで */
+
+
+/* Q5-4ここから */
